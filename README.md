@@ -4,8 +4,8 @@
 
 1. Clone the repository.
 2. Run `npm install` to install dependencies.
-3. Create a `.env` file and add the required environment variables.
-4. Run `npm start` to start the server.
+3. Create a `.env` file and add the required environment variables. (I have pushed the .env file to the repo, which is not agood practice but I have done this for easy project assessment process)
+4. Run `npm run dev` to start the server.
 
 ## API Documentation
 
