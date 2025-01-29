@@ -16,8 +16,8 @@ export class Product {
   @Column({ nullable: true })
   description?: string;
 
-  @ManyToOne(() => Category, (category) => category.products)
-  category!: Category;
+  @ManyToOne(() => Category, (category) => category.products, { nullable: true, onDelete: "SET NULL" })
+  category!: Category | null;
 
   @Column({ nullable: true })
   image_url?: string;

@@ -1,4 +1,4 @@
-# E-Commerce Backend Assignment
+# Jumbo Backend Assignment
 
 ## Setup Instructions
 
@@ -17,8 +17,9 @@
   - `page`: (optional) Page number for pagination (default is 1)
   - `limit`: (optional) Number of products per page (default is 10)
   - `tag`: (optional) Filter by product tag
-  - `price`: (optional) Filter by product price
-  - `search`: (optional) Search by product name
+  - `minPrice`: (optional) Filter by product price lower limit
+  - `maxPrice`: (optional) Filter by product price upper limit
+  - `search`: (optional) Search by product name (Case sensitive)
 
 **Example Request**:
 ```
@@ -75,3 +76,5 @@ DELETE /products/1
 ```
 
 Refer to the Postman collection for API documentation and testing.
+
+Collection Link: https://www.postman.com/garuda-api/workspace/jumbo/collection/35349355-472cbbee-d8b2-493a-b6c5-ef9eb09dae1c?action=share&creator=35349355
