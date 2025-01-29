@@ -1,10 +1,6 @@
 import { Request, Response } from 'express';
 import { ProductService } from '../services/productServices';
 
-import { AppDataSource } from '../config/db';
-import { Product } from '../entities/Product';
-import { Category } from '../entities/Category';
-
 export class ProductController {
   static async getProducts(req: Request, res: Response) {
     const { page = 1, limit = 10, tag, price, search, minPrice, maxPrice } = req.query;
@@ -37,8 +33,8 @@ export class ProductController {
 
   static async updateProduct(req: Request, res: Response) {
     try {
-        const productId = req.params.id;  // Get product ID from request params
-        const productData = req.body;     // Get product data from request body
+        const productId = req.params.id;  
+        const productData = req.body;  
 
         // Call the ProductService to update the product
         const updatedProduct = await ProductService.updateProduct(productId, productData);

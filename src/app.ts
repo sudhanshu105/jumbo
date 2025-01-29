@@ -1,4 +1,4 @@
-import 'reflect-metadata'; // Import reflect-metadata
+import 'reflect-metadata';
 import express from 'express';
 import { connectDB } from './config/db';
 import productRoutes from './routes/productRoutes';
