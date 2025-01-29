@@ -75,6 +75,6 @@ PUT /products/1
 DELETE /products/1
 ```
 
-Refer to the Postman collection for API documentation and testing.
+Refer to the Postman collection for API testing.
 
 Collection Link: https://www.postman.com/garuda-api/workspace/jumbo/collection/35349355-472cbbee-d8b2-493a-b6c5-ef9eb09dae1c?action=share&creator=35349355
