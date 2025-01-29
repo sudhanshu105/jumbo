@@ -11,7 +11,7 @@ export class ProductService {
 
     if (tag) query.andWhere('product.tag = :tag', { tag });
     if (price) query.andWhere('product.price = :price', { price });
-    if (search) query.andWhere('product.name LIKE :search', { search: `%${search}%` });
+    if (search) query.andWhere('LOWER(product.name) LIKE LOWER(:search)', { search: `%${search}%` });
     if (minPrice !== undefined) query.andWhere('product.price >= :minPrice', { minPrice });
     if (maxPrice !== undefined) query.andWhere('product.price <= :maxPrice', { maxPrice });
 
