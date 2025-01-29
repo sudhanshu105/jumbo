@@ -26,8 +26,12 @@ export class ProductController {
   }
 
   static async createProduct(req: Request, res: Response) {
-    const product = await ProductService.createProduct(req.body);
-    res.status(201).json({message: "Product added successfully" ,product});
+    try {
+      const product = await ProductService.createProduct(req.body);
+      res.status(201).json({message: "Product added successfully" ,product});
+    } catch (error) {
+      res.status(400).json({ message: (error as Error).message });
+    }
   }
 
 
